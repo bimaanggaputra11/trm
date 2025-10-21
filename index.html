@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$</div>
+        </div>
+        
+        <div class="terminal-body">
+            <div class="boot-sequence" id="bootSequence">
+                <p class="boot-line">Initializing system...</p>
+                <p class="boot-line">Loading modules... [OK]</p>
+                <p class="boot-line">Starting services... [OK]</p>
+                <p class="boot-line">Welcome to TOKEN Terminal v1.0</p>
+            </div>
+
+            <div class="content" id="mainContent">
+                <!-- Token Name Section -->
+                <div class="section token-section">
+                    <pre class="ascii-art">
+ ████████╗ ██████╗ ██╗  ██╗███████╗███╗   ██╗
+ ╚══██╔══╝██╔═══██╗██║ ██╔╝██╔════╝████╗  ██║
+    ██║   ██║   ██║█████╔╝ █████╗  ██╔██╗ ██║
+    ██║   ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╗██║
+    ██║   ╚██████╔╝██║  ██╗███████╗██║ ╚████║
+    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝
+                    </pre>
+                    <p class="token-tagline">&gt; The Future of Decentralized Finance</p>
+                </div>
+
+                <!-- About Section -->
+                <!--div class="section about-section">
+                    <h2 class="section-title">$ cat about.txt</h2>
+                    <div class="section-content">
+                        <p class="typing-text">TOKEN adalah cryptocurrency inovatif yang dibangun dengan teknologi blockchain terdepan. Kami menyediakan solusi keuangan terdesentralisasi yang aman, cepat, dan transparan untuk masa depan digital.</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">[SUPPLY]</span>
+                                <span class="stat-value">1,000,000,000</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">[NETWORK]</span>
+                                <span class="stat-value">Ethereum</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">[STATUS]</span>
+                                <span class="stat-value status-active">ACTIVE</span>
+                            </div>
+                        </div>
+                    </div>
+                </!--div-->
+
+                <!-- Features Menu -->
+                <!--div class="section features-section">
+                    <h2 class="section-title">$ ls -la features/</h2>
+                    <div class="features-grid">
+                        <div class="feature-item" data-feature="whitepaper">
+                            <div class="feature-icon">📄</div>
+                            <h3 class="feature-title">Whitepaper</h3>
+                            <p class="feature-desc">Dokumentasi lengkap tentang teknologi dan visi kami</p>
+                            <span class="feature-cmd">$ ./read_whitepaper.sh</span>
+                        </div>
+
+                        <div class="feature-item" data-feature="roadmap">
+                            <div class="feature-icon">🗺️</div>
+                            <h3 class="feature-title">Roadmap</h3>
+                            <p class="feature-desc">Perjalanan dan milestone pengembangan TOKEN</p>
+                            <span class="feature-cmd">$ ./view_roadmap.sh</span>
+                        </div>
+
+                        <div class="feature-item" data-feature="tokenomics">
+                            <div class="feature-icon">💰</div>
+                            <h3 class="feature-title">Tokenomics</h3>
+                            <p class="feature-desc">Detail distribusi dan ekonomi token</p>
+                            <span class="feature-cmd">$ ./check_tokenomics.sh</span>
+                        </div>
+
+                        <div class="feature-item" data-feature="community">
+                            <div class="feature-icon">👥</div>
+                            <h3 class="feature-title">Community</h3>
+                            <p class="feature-desc">Bergabung dengan komunitas global kami</p>
+                            <span class="feature-cmd">$ ./join_community.sh</span>
+                        </div>
+
+                        <div class="feature-item" data-feature="staking">
+                            <div class="feature-icon">🔒</div>
+                            <h3 class="feature-title">Staking</h3>
+                            <p class="feature-desc">Stake token Anda dan dapatkan reward</p>
+                            <span class="feature-cmd">$ ./start_staking.sh</span>
+                        </div>
+
+                        <div class="feature-item" data-feature="exchange">
+                            <div class="feature-icon">🔄</div>
+                            <h3 class="feature-title">Exchange</h3>
+                            <p class="feature-desc">Trading TOKEN di berbagai platform</p>
+                            <span class="feature-cmd">$ ./open_exchange.sh</span>
+                        </div>
+                    </div>
+                </!--div-->
+
+                <!-- Command Input -->
+                <div class="command-line">
+                    <span class="prompt">user@terminal:~$</span>
+                    <input type="text" class="command-input" id="commandInput" placeholder="ketik 'help' untuk melihat perintah">
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| Type 'help' for commands |</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
