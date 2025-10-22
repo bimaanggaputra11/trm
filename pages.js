@@ -1,5 +1,5 @@
 // Typing Animation Function
-function typeText(element, text, speed = 15) {
+function typeText(element, text, speed = 1) {
     return new Promise((resolve) => {
         let index = 0;
         element.textContent = '';
@@ -27,7 +27,7 @@ async function initPage(content, statsData = null) {
     contentDiv.className = 'typing-text';
     pageContent.appendChild(contentDiv);
     
-    await typeText(contentDiv, content, 15);
+    await typeText(contentDiv, content, 1);
     
     // Add stats grid if provided
     if (statsData && statsData.length > 0) {
@@ -60,7 +60,7 @@ async function initPageWithFeatures(content, features = null) {
     contentDiv.className = 'typing-text';
     pageContent.appendChild(contentDiv);
     
-    await typeText(contentDiv, content, 15);
+    await typeText(contentDiv, content, 1);
     
     // Add feature boxes if provided
     if (features && features.length > 0) {

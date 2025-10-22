@@ -17,13 +17,25 @@ function typeText(element, text, speed = 30) {
 }
 
 // ASCII Art
-const asciiArt = `
- ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
- ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
- ██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ 
- ██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ 
- ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗
- ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
+const asciiArt = `                                                                                                                                                                                                     
+                     
+                                                                                                               
+     ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗     
+     ║                                                                                                                                                                                               ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███████                                                        ██████    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                                                               ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                   █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                   █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                   █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███        ██████████ █████████████  ████████  █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███        ███        █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███        ███        █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                   █████████████            █████████████      ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███                                                               ███    ║     
+     ║  01011001 01011001 01011001 0101100101011001 01011001 01011001 0101100101011001 01011001 01011001 01011001           ███████                                                        ██████    ║     
+     ║                                                                                                                                                                                               ║     
+     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝     
+                                                                                                                                                           
 `;
 
 const welcomeText = `> The Future of Decentralized Finance
@@ -34,19 +46,19 @@ const bootSequenceText = [
     'Initializing system...',
     'Loading modules... [OK]',
     'Starting services... [OK]',
-    'Welcome to TOKEN Terminal v1.0'
+    'Welcome to MTRX Terminal v1.0'
 ];
 
 // Command Pages Mapping
 const commandPages = {
     '- about -': 'about.html',
-    '- features -': 'features.html',
-    '- whitepaper -': 'whitepaper.html',
-    '- roadmap -': 'roadmap.html',
-    '- tokenomics -': 'tokenomics.html',
+   // '- features -': 'features.html',
+   // '- whitepaper -': 'whitepaper.html',
+    //'- roadmap -': 'roadmap.html',
+  //  '- tokenomics -': 'tokenomics.html',
     '- community -': 'community.html',
-    '- staking -': 'staking.html',
-    '- exchange -': 'exchange.html',
+    //'- staking -': 'staking.html',
+    //'- exchange -': 'exchange.html',
     '- contact -': 'contact.html',
     '- matrix -': 'matrix.html',
 
@@ -57,13 +69,13 @@ const commandPages = {
 // Command List Data
 const commands = [
     { name: '- about -', desc: '' },
-    { name: '- features -', desc: '' },
-    { name: '- whitepaper -', desc: '' },
-    { name: '- roadmap -', desc: '' },
-    { name: '- tokenomics -', desc: '' },
+   // { name: '- features -', desc: '' },
+  //  { name: '- whitepaper -', desc: '' },
+    //{ name: '- roadmap -', desc: '' },
+   // { name: '- tokenomics -', desc: '' },
     { name: '- community -', desc: '' },
-    { name: '- staking -', desc: '' },
-    { name: '- exchange -', desc: '' },
+   // { name: '- staking -', desc: '' },
+   // { name: '- exchange -', desc: '' },
     { name: '- contact -', desc: '' },
     { name: '- matrix -', desc: '' }
 ];
@@ -96,10 +108,10 @@ async function initTerminal() {
     const asciiPre = document.createElement('pre');
     asciiPre.className = 'ascii-art';
     asciiSection.appendChild(asciiPre);
-    await typeText(asciiPre, asciiArt, 1);
+    await typeText(asciiPre, asciiArt, 0);
     
     // Display Welcome Message
-    await typeText(welcomeSection, welcomeText, 20);
+    await typeText(welcomeSection, welcomeText, 10);
     
     // Display Command List Title
     await new Promise(resolve => setTimeout(resolve, 300));

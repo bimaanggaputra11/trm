@@ -249,6 +249,7 @@ body {
     line-height: 1.8;
     margin: 15px 0;
     white-space: pre-wrap;
+    text-align: justify;
 }
 
 .info-grid {
@@ -432,6 +433,11 @@ body {
 .bounty-header {
     margin-bottom: 30px;
     text-align: center;
+    font-size: 30px;
+}
+
+.bounty-header .typing-text {
+    text-align: center;  /* ← TAMBAHKAN INI */
 }
 
 .bounty-tabs {
@@ -474,8 +480,7 @@ body {
 
 .bounty-table {
     width: 100%;
-    border: 1px solid #00ff00;
-    border-collapse: collapse;
+    
 }
 
 .bounty-table-header {
@@ -490,7 +495,7 @@ body {
 .bounty-row {
     display: grid;
     grid-template-columns: 1.5fr 2fr 1.5fr 1fr 1.5fr;
-    border-bottom: 1px solid #00ff00;
+  
     transition: all 0.3s;
 }
 
@@ -501,9 +506,9 @@ body {
 
 .bounty-col {
     padding: 15px;
-    border-right: 1px solid #00ff00;
+ 
     color: #00aa00;
-    font-size: 12px;
+    font-size: 16px;
     word-wrap: break-word;
 }
 
@@ -513,7 +518,7 @@ body {
 
 .bounty-table-header .bounty-col {
     color: #00ff00;
-    font-size: 13px;
+    font-size: 14px;
     text-shadow: 0 0 5px #00ff00;
 }
 
@@ -529,7 +534,7 @@ body {
     padding: 40px;
     color: #00aa00;
     font-size: 16px;
-    border: 1px solid #00ff00;
+  
     margin-top: 20px;
     background: #0a0a0a;
 }
