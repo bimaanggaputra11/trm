@@ -1,0 +1,39 @@
+cat > /home/claude/matrix.html << 'EOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Matrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ MATRIX</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| MATRIX MODE ACTIVATED |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initMatrixPage();
+        });
+    </script>
+</body>
+</html>
+EOF

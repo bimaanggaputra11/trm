@@ -1,0 +1,218 @@
+cat > /home/claude/tokenomics.html << 'EOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Tokenomics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ TOKENOMICS</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| TOKENOMICS PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        const tokenomicsContent = `
+╔════════════════════════════════════════════════════════════╗
+║                      TOKENOMICS                            ║
+║             Economic Model & Distribution                  ║
+╚════════════════════════════════════════════════════════════╝
+
+>> SUPPLY INFORMATION
+
+Total Supply: 1,000,000,000 TOKEN (Fixed - No Minting)
+Circulating Supply: 700,000,000 TOKEN (70%)
+Locked Supply: 300,000,000 TOKEN (30%)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> DISTRIBUTION BREAKDOWN
+   
+🔷 Public Sale (30%)
+   ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 300,000,000 TOKEN
+   • IDO: 150M TOKEN
+   • Public Rounds: 150M TOKEN
+   • Vesting: No lock-up
+   • Price: $0.01 - $0.025
+   
+🔷 Team & Advisors (15%)
+   ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 150,000,000 TOKEN
+   • Core Team: 100M TOKEN
+   • Advisors: 50M TOKEN
+   • Vesting: 24 months linear
+   • Cliff: 6 months
+   
+🔷 Ecosystem Fund (20%)
+   ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 200,000,000 TOKEN
+   • Development: 80M TOKEN
+   • Grants: 60M TOKEN
+   • Partnerships: 60M TOKEN
+   • Vesting: Milestone-based
+   
+🔷 Marketing (10%)
+   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 100,000,000 TOKEN
+   • Campaigns: 40M TOKEN
+   • Community: 30M TOKEN
+   • Influencers: 30M TOKEN
+   • Vesting: 18 months linear
+   
+🔷 Liquidity Pool (15%)
+   ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 150,000,000 TOKEN
+   • DEX Liquidity: 100M TOKEN
+   • CEX Liquidity: 50M TOKEN
+   • Vesting: Locked 12 months
+   
+🔷 Reserve Fund (10%)
+   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 100,000,000 TOKEN
+   • Emergency: 50M TOKEN
+   • Future Use: 50M TOKEN
+   • Vesting: 36 months linear
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> VESTING SCHEDULE
+
+Year 1 (2024):
+├─ Q1: Team Cliff Period
+├─ Q2: 40% Circulating
+├─ Q3: 55% Circulating
+└─ Q4: 70% Circulating
+
+Year 2 (2025):
+├─ Q1: 80% Circulating
+├─ Q2: 85% Circulating
+├─ Q3: 90% Circulating
+└─ Q4: 95% Circulating
+
+Year 3 (2026):
+└─ Q1: 100% Fully Circulating
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> TOKEN UTILITY
+
+✓ Governance Rights
+  └─ Vote on protocol upgrades
+  └─ Propose new features
+  └─ Treasury management decisions
+  └─ Parameter adjustments
+
+✓ Staking Rewards
+  └─ Earn passive income
+  └─ Multiple tier options
+  └─ APY: 12% - 35%
+  └─ Flexible lock periods
+
+✓ Transaction Fees
+  └─ Pay gas fees on network
+  └─ Discounted rates for holders
+  └─ Priority transaction processing
+  └─ Reduced trading fees
+
+✓ DeFi Collateral
+  └─ Lending/Borrowing
+  └─ Yield farming
+  └─ Liquidity mining
+  └─ Leverage trading
+
+✓ NFT Marketplace
+  └─ Purchase NFTs
+  └─ Creator royalties
+  └─ Staking NFTs
+  └─ Exclusive drops
+
+✓ Premium Features
+  └─ Advanced analytics
+  └─ API access
+  └─ Priority support
+  └─ Early access features
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> DEFLATIONARY MECHANISM
+
+Token Burn Schedule:
+• Quarterly burns based on protocol revenue
+• Maximum burn: 10% of total supply (100M TOKEN)
+• Burn rate: 0.1% - 0.5% per quarter
+• Publicly verifiable on blockchain
+
+Burn Sources:
+├─ Transaction fees: 20%
+├─ Trading fees: 30%
+├─ NFT marketplace: 15%
+├─ Protocol revenue: 25%
+└─ Buyback program: 10%
+
+Target: Reduce supply to 900M TOKEN over 5 years
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> REVENUE MODEL
+
+Protocol Revenue Streams:
+• Transaction Fees: 0.3%
+• Staking Penalties: 0.5%
+• NFT Marketplace: 2.5%
+• Premium Services: Subscription
+• Enterprise Solutions: Custom
+
+Revenue Allocation:
+├─ Development: 30%
+├─ Marketing: 20%
+├─ Operations: 20%
+├─ Token Burn: 20%
+└─ Reserve: 10%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> MARKET METRICS (Current)
+
+Price: $0.025
+Market Cap: $25,000,000
+24h Volume: $2,500,000
+Holders: 50,000+
+Exchanges: 12
+Liquidity: $5,000,000+
+
+>> PRICE TARGETS
+
+2024: $0.05 (100% growth)
+2025: $0.15 (500% growth)
+2026: $0.50 (1900% growth)
+Long-term: $1.00+ (3900%+ growth)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tokenomics designed for sustainable long-term growth
+with strong deflationary pressure and utility expansion.
+
+Contract: 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb
+`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPage(tokenomicsContent);
+        });
+    </script>
+</body>
+</html>
+EOF

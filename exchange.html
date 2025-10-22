@@ -1,0 +1,284 @@
+cat > /home/claude/exchange.html << 'EOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ EXCHANGE</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| EXCHANGE PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        const exchangeContent = `
+╔════════════════════════════════════════════════════════════╗
+║                  EXCHANGE LISTINGS                         ║
+║            Where to Buy & Trade TOKEN                      ║
+╚════════════════════════════════════════════════════════════╝
+
+TOKEN tersedia untuk trading di berbagai platform exchange
+dengan volume tinggi dan likuiditas yang solid.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> CENTRALIZED EXCHANGES (CEX)
+
+🔷 BINANCE - Tier 1 Exchange
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Pairs: TOKEN/USDT, TOKEN/BTC, TOKEN/BUSD
+   24h Volume: $5,200,000
+   Maker Fee: 0.10%
+   Taker Fee: 0.10%
+   
+   Features:
+   ✓ High liquidity
+   ✓ Advanced trading tools
+   ✓ Spot & Futures
+   ✓ Staking available
+   
+   Link: binance.com
+   Status: [ACTIVE] ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔷 COINBASE - USA's #1 Exchange
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Pairs: TOKEN/USD, TOKEN/USDT, TOKEN/EUR
+   24h Volume: $3,800,000
+   Maker Fee: 0.50%
+   Taker Fee: 0.50%
+   
+   Features:
+   ✓ Regulated & Secure
+   ✓ Easy onboarding
+   ✓ Insurance coverage
+   ✓ Bank transfers
+   
+   Link: coinbase.com
+   Status: [ACTIVE] ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔷 KUCOIN - The People's Exchange
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Pairs: TOKEN/USDT, TOKEN/ETH, TOKEN/BTC
+   24h Volume: $2,100,000
+   Maker Fee: 0.10%
+   Taker Fee: 0.10%
+   
+   Features:
+   ✓ Low fees
+   ✓ Lending & Staking
+   ✓ Trading bots
+   ✓ Multiple languages
+   
+   Link: kucoin.com
+   Status: [ACTIVE] ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔷 GATE.IO - Global Trading Platform
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Pairs: TOKEN/USDT, TOKEN/USD
+   24h Volume: $1,500,000
+   Maker Fee: 0.15%
+   Taker Fee: 0.15%
+   
+   Features:
+   ✓ High security
+   ✓ DeFi mining
+   ✓ Copy trading
+   ✓ Affiliate program
+   
+   Link: gate.io
+   Status: [ACTIVE] ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔷 BYBIT - Derivatives Leader
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Pairs: TOKEN/USDT
+   24h Volume: $950,000
+   Maker Fee: 0.02%
+   Taker Fee: 0.05%
+   
+   Features:
+   ✓ Leverage trading
+   ✓ Perpetual contracts
+   ✓ Low latency
+   ✓ Demo trading
+   
+   Link: bybit.com
+   Status: [ACTIVE] ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> DECENTRALIZED EXCHANGES (DEX)
+
+🔶 UNISWAP V3 - Leading DEX
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Network: Ethereum
+   Pool: TOKEN/ETH
+   TVL: $12,500,000
+   Fee Tier: 0.3%
+   
+   Liquidity Providers Earn: 15-25% APY
+   
+   Features:
+   ✓ Non-custodial
+   ✓ Concentrated liquidity
+   ✓ Multiple fee tiers
+   ✓ No KYC required
+   
+   Link: app.uniswap.org
+   Contract: 0x742d35Cc...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔶 PANCAKESWAP - BSC's #1 DEX
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Network: Binance Smart Chain
+   Pool: TOKEN/BNB
+   TVL: $8,200,000
+   Fee: 0.25%
+   
+   Liquidity Providers Earn: 20-30% APY
+   
+   Features:
+   ✓ Low gas fees
+   ✓ Yield farming
+   ✓ Lottery & NFTs
+   ✓ Fast transactions
+   
+   Link: pancakeswap.finance
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔶 SUSHISWAP - Community-Driven
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Network: Ethereum, Polygon
+   Pool: TOKEN/ETH, TOKEN/MATIC
+   TVL: $5,700,000
+   Fee: 0.3%
+   
+   Liquidity Providers Earn: 12-20% APY
+   
+   Features:
+   ✓ Multi-chain
+   ✓ Onsen rewards
+   ✓ Kashi lending
+   ✓ SUSHI rewards
+   
+   Link: sushi.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔶 CURVE FINANCE - Stablecoin DEX
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Network: Ethereum
+   Pool: TOKEN/USDT/USDC
+   TVL: $3,200,000
+   Fee: 0.04%
+   
+   Liquidity Providers Earn: 8-15% APY
+   
+   Features:
+   ✓ Low slippage
+   ✓ Optimized for stables
+   ✓ CRV rewards
+   ✓ Gauge voting
+   
+   Link: curve.fi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> MARKET OVERVIEW
+
+Current Price: $0.025
+24h Change: +5.3% ↑
+24h High: $0.026
+24h Low: $0.023
+
+Total 24h Volume: $15,300,000
+├─ CEX Volume: $13,550,000 (89%)
+└─ DEX Volume: $1,750,000 (11%)
+
+Market Capitalization: $25,000,000
+Fully Diluted Value: $35,700,000
+Circulating Supply: 700M TOKEN
+Total Supply: 1B TOKEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> TRADING TIPS
+
+✓ Do Your Research
+  └─ Understand tokenomics
+  └─ Check project updates
+  └─ Follow news
+
+✓ Risk Management
+  └─ Only invest what you can afford
+  └─ Diversify portfolio
+  └─ Use stop-loss orders
+
+✓ Security First
+  └─ Use hardware wallet
+  └─ Enable 2FA
+  └─ Verify contract addresses
+
+✓ Best Practices
+  └─ Start with small amounts
+  └─ Learn technical analysis
+  └─ Join trading communities
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> UPCOMING LISTINGS
+
+Q4 2024:
+• Crypto.com
+• Huobi Global
+• OKX Exchange
+
+2025:
+• Kraken
+• Bitfinex
+• More tier-1 exchanges
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Start trading TOKEN today!
+Choose your preferred exchange and join thousands of traders.
+
+📊 Live Chart: https://www.dextools.io/app/token
+📈 Price Tracker: https://coinmarketcap.com/currencies/token
+`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPage(exchangeContent);
+        });
+    </script>
+</body>
+</html>
+EOF

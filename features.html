@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ FEATURES</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| FEATURES PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        const featuresContent = `
+╔════════════════════════════════════════════════════════════╗
+║                    FITUR-FITUR TOKEN                       ║
+╚════════════════════════════════════════════════════════════╝
+
+Teknologi blockchain terdepan dengan fitur-fitur canggih
+untuk mendukung ekosistem keuangan terdesentralisasi.
+`;
+
+        const features = [
+            {
+                title: '🔒 Keamanan Tingkat Tinggi',
+                desc: 'Dilindungi dengan enkripsi blockchain yang tidak dapat dibobol. Multi-signature wallet, cold storage, dan audit keamanan berkala untuk melindungi aset Anda.'
+            },
+            {
+                title: '⚡ Transaksi Cepat',
+                desc: 'Proses transaksi dalam hitungan detik dengan biaya minimal. Throughput hingga 10,000+ transaksi per detik dengan konfirmasi instant.'
+            },
+            {
+                title: '🌐 Terdesentralisasi',
+                desc: 'Tidak ada otoritas pusat, sepenuhnya dikontrol oleh komunitas. Governance berbasis DAO untuk keputusan yang demokratis dan transparan.'
+            },
+            {
+                title: '💎 Smart Contract',
+                desc: 'Kontrak pintar yang transparan dan dapat diaudit publik. EVM compatible dengan dukungan untuk berbagai aplikasi DeFi dan Web3.'
+            },
+            {
+                title: '📊 Transparansi Penuh',
+                desc: 'Semua transaksi dapat dilacak di blockchain explorer. Real-time monitoring dan reporting untuk transparansi maksimal.'
+            },
+            {
+                title: '🔄 Cross-Chain Compatible',
+                desc: 'Kompatibel dengan berbagai blockchain network melalui bridge technology. Interoperability dengan Ethereum, BSC, Polygon, dan lainnya.'
+            },
+            {
+                title: '🛡️ Audit & Verified',
+                desc: 'Smart contract telah diaudit oleh perusahaan keamanan terkemuka. Verified source code di blockchain explorer untuk kepercayaan penuh.'
+            },
+            {
+                title: '💰 Low Transaction Fees',
+                desc: 'Biaya transaksi yang sangat rendah dibandingkan platform lain. Optimized gas usage untuk efisiensi maksimal.'
+            },
+            {
+                title: '📱 Mobile & Web Support',
+                desc: 'Akses melalui aplikasi mobile (iOS & Android) dan web interface yang user-friendly. Seamless experience di semua perangkat.'
+            },
+            {
+                title: '🎯 Developer Friendly',
+                desc: 'Dokumentasi lengkap, SDK, dan API untuk memudahkan pengembangan. Active developer community dan technical support.'
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPageWithFeatures(featuresContent, features);
+        });
+    </script>
+</body>
+</html>

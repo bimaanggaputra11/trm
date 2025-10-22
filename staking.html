@@ -1,0 +1,252 @@
+cat > /home/claude/staking.html << 'EOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Staking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ STAKING</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| STAKING PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        const stakingContent = `
+╔════════════════════════════════════════════════════════════╗
+║                    STAKING PROGRAM                         ║
+║              Earn Passive Income with TOKEN                ║
+╚════════════════════════════════════════════════════════════╝
+
+Stake your TOKEN dan dapatkan rewards! Multiple tiers dengan
+berbagai benefit untuk memaksimalkan earning Anda.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> STAKING TIERS
+
+🥉 BRONZE TIER
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Min Stake: 1,000 TOKEN
+   Max Stake: 10,000 TOKEN
+   
+   APY: 12%
+   Lock Period: 30 days
+   Withdrawal: Flexible after lock
+   
+   Benefits:
+   ✓ Daily compound interest
+   ✓ Basic dashboard access
+   ✓ Email support
+   
+   Monthly Return (1,000 TOKEN):
+   └─ ~10 TOKEN/month
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🥈 SILVER TIER
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Min Stake: 10,001 TOKEN
+   Max Stake: 50,000 TOKEN
+   
+   APY: 18%
+   Lock Period: 90 days
+   Withdrawal: Flexible after lock
+   
+   Benefits:
+   ✓ Daily compound interest
+   ✓ Advanced dashboard
+   ✓ Priority email support
+   ✓ Quarterly bonus: +2%
+   
+   Monthly Return (10,001 TOKEN):
+   └─ ~150 TOKEN/month
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🥇 GOLD TIER
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Min Stake: 50,001 TOKEN
+   Max Stake: 100,000 TOKEN
+   
+   APY: 25%
+   Lock Period: 180 days
+   Withdrawal: Flexible after lock
+   
+   Benefits:
+   ✓ Daily compound interest
+   ✓ VIP dashboard access
+   ✓ 24/7 priority support
+   ✓ Governance voting rights
+   ✓ Exclusive NFT reward
+   ✓ Quarterly bonus: +3%
+   
+   Monthly Return (50,001 TOKEN):
+   └─ ~1,042 TOKEN/month
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💎 DIAMOND TIER
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Min Stake: 100,001+ TOKEN
+   Max Stake: Unlimited
+   
+   APY: 35%
+   Lock Period: 365 days
+   Withdrawal: Flexible after lock
+   
+   Benefits:
+   ✓ Daily compound interest
+   ✓ Elite dashboard access
+   ✓ Dedicated account manager
+   ✓ Full governance rights
+   ✓ Exclusive NFT collection
+   ✓ VIP community access
+   ✓ Revenue sharing: 0.5%
+   ✓ Quarterly bonus: +5%
+   
+   Monthly Return (100,001 TOKEN):
+   └─ ~2,917 TOKEN/month
+   
+   Annual Return: ~35,000 TOKEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> REWARD DISTRIBUTION
+
+Frequency: Daily
+Payment: In TOKEN
+Compound: Automatic (optional)
+Claim: Anytime after lock period
+
+Reward Calculation:
+Daily Rate = (APY / 365)
+Daily Reward = Staked Amount × Daily Rate
+
+Example (Gold Tier - 50,000 TOKEN):
+└─ Daily: ~34.25 TOKEN
+└─ Monthly: ~1,042 TOKEN
+└─ Yearly: ~12,500 TOKEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> FEATURES
+
+✓ Auto-Restaking
+  └─ Automatically compound rewards
+  └─ Maximize returns
+  └─ Set and forget
+
+✓ Flexible Withdrawal
+  └─ Withdraw after lock period
+  └─ No penalties
+  └─ Instant processing
+
+✓ Emergency Unstake
+  └─ Unstake anytime
+  └─ 10% early withdrawal fee
+  └─ Rewards forfeited
+
+✓ Referral Program
+  └─ Earn 5% of referral stakes
+  └─ Unlimited referrals
+  └─ Passive income boost
+
+✓ Insurance Fund
+  └─ Smart contract coverage
+  └─ Up to $1M protection
+  └─ Peace of mind
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> HOW TO STAKE
+
+Step 1: Connect Wallet
+└─ MetaMask, Trust Wallet, or WalletConnect
+└─ Ensure you have TOKEN in wallet
+
+Step 2: Choose Tier
+└─ Select staking tier based on amount
+└─ Review APY and lock period
+
+Step 3: Enter Amount
+└─ Input stake amount
+└─ Check rewards estimation
+
+Step 4: Confirm Transaction
+└─ Approve smart contract
+└─ Confirm staking transaction
+└─ Wait for confirmation
+
+Step 5: Start Earning
+└─ View dashboard
+└─ Track rewards
+└─ Compound or claim
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> CURRENT STATS
+
+Total Value Locked: $12,500,000
+Total Stakers: 5,234
+Average Stake: 15,000 TOKEN
+Total Rewards Paid: $2,340,000
+
+Staking Capacity: 75% utilized
+Available Slots: Unlimited
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+>> SECURITY
+
+✓ Audited Smart Contract
+  └─ CertiK Audit Passed
+  └─ Open source code
+  └─ Regular security reviews
+
+✓ Multi-Sig Wallet
+  └─ 5-of-7 signatures required
+  └─ Team + Community multisig
+  └─ Transparent operations
+
+✓ Insurance Coverage
+  └─ Nexus Mutual integration
+  └─ Cover up to $1M
+  └─ Claim process available
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ready to start earning?
+
+🚀 Start Staking: https://stake.token.example.com
+📊 Dashboard: https://app.token.example.com
+❓ FAQ: https://docs.token.example.com/staking
+
+Status: [LIVE] ✓
+`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPage(stakingContent);
+        });
+    </script>
+</body>
+</html>
+EOF

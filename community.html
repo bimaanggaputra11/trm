@@ -1,0 +1,204 @@
+cat > /home/claude/community.html << 'EOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ COMMUNITY</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            <div class="page-content" id="pageContent"></div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| COMMUNITY PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        const communityContent = `
+╔════════════════════════════════════════════════════════════╗
+║                   JOIN OUR COMMUNITY                       ║
+╚════════════════════════════════════════════════════════════╝
+
+Bergabunglah dengan komunitas TOKEN yang berkembang pesat
+di berbagai platform sosial media dan komunikasi!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 SOCIAL MEDIA
+
+🐦 Twitter: @TokenOfficial
+   └─ Latest news & announcements
+   └─ Community engagement
+   └─ Giveaways & contests
+
+📱 Telegram: t.me/TokenCommunity
+   └─ Main discussion group
+   └─ 24/7 active community
+   └─ Real-time updates
+
+💬 Discord: discord.gg/token
+   └─ Voice & text channels
+   └─ Gaming community
+   └─ Developer discussions
+
+🔴 Reddit: r/TokenCrypto
+   └─ In-depth discussions
+   └─ AMA sessions
+   └─ Community polls
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💬 SPECIALIZED CHANNELS
+
+📢 Announcements
+   • Telegram: t.me/TokenAnnouncements
+   • Official updates only
+   • Major news & events
+
+💭 Discussion Groups
+   • General: t.me/TokenDiscussion
+   • Trading: t.me/TokenTrading
+   • Technical: t.me/TokenDev
+
+🆘 Support
+   • Help Desk: t.me/TokenSupport
+   • FAQ Channel
+   • Ticket System
+
+🌏 Regional Communities
+   • Indonesia: t.me/TokenIndonesia
+   • China: t.me/TokenChina
+   • Korea: t.me/TokenKorea
+   • Japan: t.me/TokenJapan
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌍 COMMUNITY STATISTICS
+
+Total Members: 50,000+
+├─ Telegram: 25,000+
+├─ Twitter: 15,000+
+├─ Discord: 8,000+
+└─ Reddit: 2,000+
+
+Active Daily Users: 5,000+
+Countries Represented: 150+
+Languages Supported: 25+
+
+Growth Rate: +500 members/day
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 COMMUNITY BENEFITS
+
+✓ Early Access
+  └─ Beta features testing
+  └─ New product launches
+  └─ Exclusive information
+
+✓ Airdrops & Rewards
+  └─ Regular airdrops
+  └─ Contest prizes
+  └─ Referral rewards
+  └─ Loyalty programs
+
+✓ Governance
+  └─ Vote on proposals
+  └─ Community decisions
+  └─ Feature requests
+  └─ Treasury allocation
+
+✓ Networking
+  └─ Meet like-minded people
+  └─ Partnership opportunities
+  └─ Collaboration projects
+  └─ Knowledge sharing
+
+✓ Education
+  └─ Webinars & workshops
+  └─ Trading tutorials
+  └─ Technical guides
+  └─ Market analysis
+
+✓ Direct Support
+  └─ Team accessibility
+  └─ Quick responses
+  └─ Problem resolution
+  └─ Feature development
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🏆 AMBASSADOR PROGRAM
+
+Become a TOKEN Ambassador!
+
+Requirements:
+• Active community member
+• Strong social presence
+• Passion for blockchain
+• Communication skills
+
+Benefits:
+• Exclusive TOKEN rewards
+• Direct team access
+• Special recognition
+• Leadership opportunities
+• Monthly stipend
+
+Apply: https://token.example.com/ambassador
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 COMMUNITY EVENTS
+
+Weekly:
+• Trading discussions
+• Tech talks
+• Community calls
+
+Monthly:
+• AMA sessions
+• Giveaway contests
+• Virtual meetups
+
+Quarterly:
+• Major announcements
+• Roadmap updates
+• Community votes
+
+Annually:
+• TOKEN Summit
+• Awards ceremony
+• Global meetups
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Join us today and be part of the revolution!
+Together we build the future of decentralized finance.
+
+#TOKENCommunity #DecentralizedFuture
+`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPage(communityContent);
+        });
+    </script>
+</body>
+</html>
+EOF
