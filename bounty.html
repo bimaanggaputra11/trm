@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Token - Bounty Missions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">user@terminal:~$ BOUNTY MISSIONS</div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <a href="index.html" class="back-link">Back to Home</a>
+            
+            <div class="page-content" id="pageContent">
+                <div class="bounty-header">
+                    <div class="typing-text" id="bountyTitle"></div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="bounty-tabs">
+                    <button class="bounty-tab active" data-tab="active">ACTIVE</button>
+                    <button class="bounty-tab" data-tab="complete">COMPLETE</button>
+                    <button class="bounty-tab" data-tab="pending">PENDING</button>
+                    <button class="bounty-tab" data-tab="expired">EXPIRED</button>
+                </div>
+
+                <!-- Bounty Table Container -->
+                <div class="bounty-table-container" id="bountyTableContainer"></div>
+            </div>
+        </div>
+
+        <div class="terminal-footer">
+            <span class="footer-text">| BOUNTY MISSIONS PAGE |</span>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+    <script>
+        // Bounty Data by Type
+        const bountyData = {
+            'twitter-raid': {
+                title: 'TWITTER RAID MISSIONS',
+                active: [
+                    {
+                        name: 'Daily RT Campaign #1',
+                        task: 'Retweet and like our latest announcement post',
+                        submission: 'Submit tweet URL via form',
+                        reward: '0.5',
+                        engagement: '100 Likes, 50 RTs'
+                    },
+                    {
+                        name: 'Weekly Thread Boost',
+                        task: 'Reply to our thread with quality engagement',
+                        submission: 'Submit reply URL',
+                        reward: '1.0',
+                        engagement: '200 Likes, 100 RTs'
+                    },
+                    {
+                        name: 'Influencer Tag Campaign',
+                        task: 'Tag 3 crypto influencers in our post',
+                        submission: 'Screenshot + Tweet URL',
+                        reward: '0.75',
+                        engagement: '150 Likes, 75 RTs'
+                    }
+                ],
+                complete: [
+                    {
+                        name: 'Launch Day Raid',
+                        task: 'RT launch announcement and tag friends',
+                        submission: 'Tweet URL submitted',
+                        reward: '2.0',
+                        engagement: '500 Likes, 300 RTs'
+                    }
+                ],
+                pending: [
+                    {
+                        name: 'Community Spotlight',
+                        task: 'Create engagement thread about TOKEN',
+                        submission: 'Under review',
+                        reward: '1.5',
+                        engagement: '250 Likes, 150 RTs'
+                    }
+                ],
+                expired: [
+                    {
+                        name: 'Beta Launch Promotion',
+                        task: 'Promote beta launch on Twitter',
+                        submission: 'Campaign ended',
+                        reward: '3.0',
+                        engagement: '1000 Likes, 500 RTs'
+                    }
+                ]
+            },
+            'content-creation': {
+                title: 'CONTENT CREATION MISSIONS',
+                active: [
+                    {
+                        name: 'YouTube Tutorial',
+                        task: 'Create 5-10 min tutorial about TOKEN staking',
+                        submission: 'YouTube link + analytics',
+                        reward: '5.0',
+                        engagement: '1000 views, 50 likes'
+                    },
+                    {
+                        name: 'Blog Article',
+                        task: 'Write detailed article about TOKEN features',
+                        submission: 'Article link (Medium/Blog)',
+                        reward: '3.0',
+                        engagement: '500 reads, 25 claps'
+                    },
+                    {
+                        name: 'Infographic Design',
+                        task: 'Create shareable infographic about tokenomics',
+                        submission: 'High-res image file',
+                        reward: '2.5',
+                        engagement: '200 shares'
+                    }
+                ],
+                complete: [
+                    {
+                        name: 'Explainer Video',
+                        task: 'Create animated explainer video',
+                        submission: 'Video delivered',
+                        reward: '10.0',
+                        engagement: '5000 views, 200 likes'
+                    }
+                ],
+                pending: [
+                    {
+                        name: 'Twitter Space Hosting',
+                        task: 'Host Twitter Space about DeFi trends',
+                        submission: 'Recording submitted',
+                        reward: '4.0',
+                        engagement: '300 listeners'
+                    }
+                ],
+                expired: [
+                    {
+                        name: 'Launch Week Content',
+                        task: 'Daily content during launch week',
+                        submission: 'Week ended',
+                        reward: '15.0',
+                        engagement: '10000 impressions'
+                    }
+                ]
+            },
+            'telegram-campaign': {
+                title: 'TELEGRAM CAMPAIGN MISSIONS',
+                active: [
+                    {
+                        name: 'Daily Engagement',
+                        task: 'Active participation in group discussions',
+                        submission: 'Daily activity log',
+                        reward: '0.3',
+                        engagement: '10 messages/day'
+                    },
+                    {
+                        name: 'Member Referral',
+                        task: 'Invite 10 new members to Telegram',
+                        submission: 'Referral list',
+                        reward: '2.0',
+                        engagement: '10 active members'
+                    },
+                    {
+                        name: 'Question Answering',
+                        task: 'Help answer community questions',
+                        submission: 'Screenshot of answers',
+                        reward: '1.0',
+                        engagement: '20 helpful answers'
+                    }
+                ],
+                complete: [
+                    {
+                        name: 'Welcome Campaign',
+                        task: 'Welcome new members for 7 days',
+                        submission: 'Completed',
+                        reward: '1.5',
+                        engagement: '100 welcomes'
+                    }
+                ],
+                pending: [
+                    {
+                        name: 'Community Poll',
+                        task: 'Create and run community poll',
+                        submission: 'Under review',
+                        reward: '0.8',
+                        engagement: '200 votes'
+                    }
+                ],
+                expired: [
+                    {
+                        name: 'Launch AMA',
+                        task: 'Participate in launch AMA',
+                        submission: 'Event ended',
+                        reward: '2.5',
+                        engagement: '500 participants'
+                    }
+                ]
+            },
+            'meme-contest': {
+                title: 'MEME CONTEST MISSIONS',
+                active: [
+                    {
+                        name: 'Weekly Meme #1',
+                        task: 'Create viral TOKEN meme',
+                        submission: 'Upload to contest thread',
+                        reward: '1.0',
+                        engagement: '500 likes, 100 shares'
+                    },
+                    {
+                        name: 'GIF Animation',
+                        task: 'Create animated TOKEN GIF',
+                        submission: 'GIF file + Twitter post',
+                        reward: '2.0',
+                        engagement: '1000 likes, 250 shares'
+                    },
+                    {
+                        name: 'Meme Series',
+                        task: 'Create 5 related memes for campaign',
+                        submission: 'ZIP file with all memes',
+                        reward: '3.5',
+                        engagement: '2000 total engagement'
+                    }
+                ],
+                complete: [
+                    {
+                        name: 'Launch Meme Contest',
+                        task: 'Best launch meme winner',
+                        submission: 'Won 1st place',
+                        reward: '5.0',
+                        engagement: '10000 impressions'
+                    }
+                ],
+                pending: [
+                    {
+                        name: 'Holiday Special',
+                        task: 'Holiday-themed TOKEN meme',
+                        submission: 'Judging in progress',
+                        reward: '2.5',
+                        engagement: '1500 likes'
+                    }
+                ],
+                expired: [
+                    {
+                        name: 'September Contest',
+                        task: 'Monthly meme contest',
+                        submission: 'Contest closed',
+                        reward: '4.0',
+                        engagement: '5000 impressions'
+                    }
+                ]
+            },
+            'translation': {
+                title: 'TRANSLATION MISSIONS',
+                active: [
+                    {
+                        name: 'Whitepaper - Spanish',
+                        task: 'Translate whitepaper to Spanish',
+                        submission: 'Google Doc link',
+                        reward: '8.0',
+                        engagement: 'Quality review required'
+                    },
+                    {
+                        name: 'Website - Chinese',
+                        task: 'Translate website content to Chinese',
+                        submission: 'Translation file',
+                        reward: '10.0',
+                        engagement: 'Native speaker required'
+                    },
+                    {
+                        name: 'Blog Posts - French',
+                        task: 'Translate 5 blog posts to French',
+                        submission: 'Medium drafts',
+                        reward: '5.0',
+                        engagement: 'Fluent French required'
+                    }
+                ],
+                complete: [
+                    {
+                        name: 'Whitepaper - Japanese',
+                        task: 'Japanese translation completed',
+                        submission: 'Published',
+                        reward: '8.0',
+                        engagement: 'Verified translation'
+                    }
+                ],
+                pending: [
+                    {
+                        name: 'FAQ - Korean',
+                        task: 'Translate FAQ section',
+                        submission: 'Under review',
+                        reward: '3.0',
+                        engagement: 'Pending verification'
+                    }
+                ],
+                expired: [
+                    {
+                        name: 'Launch Content - German',
+                        task: 'Launch materials translation',
+                        submission: 'Campaign ended',
+                        reward: '6.0',
+                        engagement: 'Launch completed'
+                    }
+                ]
+            }
+        };
+
+        // Get bounty type from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bountyType = urlParams.get('type') || 'twitter-raid';
+        const currentBounty = bountyData[bountyType];
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', async () => {
+            const titleEl = document.getElementById('bountyTitle');
+            await typeText(titleEl, currentBounty.title, 20);
+            
+            // Show active tab by default
+            showBounties('active');
+        });
+
+        // Tab switching
+        document.querySelectorAll('.bounty-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.bounty-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                showBounties(this.dataset.tab);
+            });
+        });
+
+        // Show bounties for selected tab
+        function showBounties(status) {
+            const container = document.getElementById('bountyTableContainer');
+            const bounties = currentBounty[status];
+            
+            if (!bounties || bounties.length === 0) {
+                container.innerHTML = '<div class="no-bounties">No bounties in this category</div>';
+                return;
+            }
+
+            let html = `
+                <div class="bounty-table">
+                    <div class="bounty-table-header">
+                        <div class="bounty-col">Bounty Name</div>
+                        <div class="bounty-col">Task Description</div>
+                        <div class="bounty-col">Submission Method</div>
+                        <div class="bounty-col">Reward (SOL)</div>
+                        <div class="bounty-col">Min. Engagement</div>
+                    </div>
+            `;
+
+            bounties.forEach(bounty => {
+                html += `
+                    <div class="bounty-row">
+                        <div class="bounty-col" data-label="Bounty Name:">${bounty.name}</div>
+                        <div class="bounty-col" data-label="Task Description:">${bounty.task}</div>
+                        <div class="bounty-col" data-label="Submission Method:">${bounty.submission}</div>
+                        <div class="bounty-col bounty-reward" data-label="Reward (SOL):">${bounty.reward} SOL</div>
+                        <div class="bounty-col" data-label="Min. Engagement:">${bounty.engagement}</div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        // Typing animation function
+        function typeText(element, text, speed = 30) {
+            return new Promise((resolve) => {
+                let index = 0;
+                element.textContent = '';
+                
+                const interval = setInterval(() => {
+                    if (index < text.length) {
+                        element.textContent += text.charAt(index);
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                        resolve();
+                    }
+                }, speed);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -18,12 +18,12 @@ function typeText(element, text, speed = 30) {
 
 // ASCII Art
 const asciiArt = `
- ████████╗ ██████╗ ██╗  ██╗███████╗███╗   ██╗
- ╚══██╔══╝██╔═══██╗██║ ██╔╝██╔════╝████╗  ██║
-    ██║   ██║   ██║█████╔╝ █████╗  ██╔██╗ ██║
-    ██║   ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╗██║
-    ██║   ╚██████╔╝██║  ██╗███████╗██║ ╚████║
-    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝
+ ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
+ ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
+ ██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ 
+ ██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ 
+ ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗
+ ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
 `;
 
 const welcomeText = `> The Future of Decentralized Finance
@@ -48,7 +48,10 @@ const commandPages = {
     '- staking -': 'staking.html',
     '- exchange -': 'exchange.html',
     '- contact -': 'contact.html',
-    '- matrix -': 'matrix.html'
+    '- matrix -': 'matrix.html',
+
+    '- bounty -': 'bounty.html?type=translation'
+
 };
 
 // Command List Data
@@ -65,6 +68,14 @@ const commands = [
     { name: '- matrix -', desc: '' }
 ];
 
+// Matrix Missions Data
+const matrixMissions = [
+  
+    { name: '- bounty -', desc: '' }
+];
+
+
+
 // Initialize Terminal
 async function initTerminal() {
     // Type boot sequence
@@ -72,7 +83,7 @@ async function initTerminal() {
     
     for (let i = 0; i < bootLines.length; i++) {
         await new Promise(resolve => setTimeout(resolve, 200));
-        await typeText(bootLines[i], bootSequenceText[i], 20);
+        await typeText(bootLines[i], bootSequenceText[i], 10);
     }
     
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -88,13 +99,42 @@ async function initTerminal() {
     await typeText(asciiPre, asciiArt, 1);
     
     // Display Welcome Message
-    await typeText(welcomeSection, welcomeText, 30);
+    await typeText(welcomeSection, welcomeText, 20);
     
     // Display Command List Title
-    const titleDiv = document.createElement('div');
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    const missionsTitleDiv = document.createElement('div');
+    missionsTitleDiv.className = 'command-list-title';
+    missionsTitleDiv.style.marginTop = '40px';
+    commandSection.appendChild(missionsTitleDiv);
+    await typeText(missionsTitleDiv, 'Matrix Missions:', 20);
+    
+    const missionsListDiv = document.createElement('div');
+    missionsListDiv.className = 'command-list';
+    commandSection.appendChild(missionsListDiv);
+    
+    for (const mission of matrixMissions) {
+        await new Promise(resolve => setTimeout(resolve, 150));
+        
+        const missionLink = document.createElement('a');
+        missionLink.href = commandPages[mission.name];
+        missionLink.className = 'command-item mission-item';
+        missionLink.innerHTML = `
+            <span class="command-name">${mission.name}</span>
+            <span class="command-desc">${mission.desc}</span>
+        `;
+        
+        missionsListDiv.appendChild(missionLink);
+    }
+    
+    // Add Matrix Missions Section
+    
+    
+const titleDiv = document.createElement('div');
     titleDiv.className = 'command-list-title';
     commandSection.appendChild(titleDiv);
-    await typeText(titleDiv, 'Available Commands:', 30);
+    await typeText(titleDiv, 'Available Commands:', 20);
     
     // Display Command List
     const listDiv = document.createElement('div');
@@ -114,7 +154,7 @@ async function initTerminal() {
         
         listDiv.appendChild(cmdLink);
     }
-    
+
     // Focus on input
     document.getElementById('commandInput').focus();
 }
