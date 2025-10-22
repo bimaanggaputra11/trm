@@ -86,7 +86,7 @@ function initMatrixPage() {
     
     const introDiv = document.createElement('div');
     introDiv.className = 'typing-text';
-    introDiv.textContent = '🟢 Initializing Matrix Effect...\n\nWelcome to the Matrix. Follow the white rabbit 🐰\n\n';
+    introDiv.textContent = '🟢 Initializing Matrix Effect...\n\nWelcome to the Matrix. MTRX [⌐■-■]';
     pageContent.appendChild(introDiv);
     
     // Create canvas
@@ -136,8 +136,6 @@ The Matrix is everywhere. It is all around us.
 A digital consciousness flowing through the blockchain.
 
 <span style="color: #00aa00;">System Status: ONLINE ✓</span>
-<span style="color: #00aa00;">Nodes Connected: 10,247</span>
-<span style="color: #00aa00;">Network Speed: 99.9%</span>
 `;
         pageContent.appendChild(infoDiv);
     }, 2000);

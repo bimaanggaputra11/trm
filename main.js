@@ -38,8 +38,7 @@ const asciiArt = `
                                                                                                                                                            
 `;
 
-const welcomeText = `> The Future of Decentralized Finance
-> Click any command below to navigate`;
+const welcomeText = `> MTRX: The Matrix of Collective Creation.`;
 
 // Boot Sequence Text
 const bootSequenceText = [
@@ -52,13 +51,7 @@ const bootSequenceText = [
 // Command Pages Mapping
 const commandPages = {
     '- about -': 'about.html',
-   // '- features -': 'features.html',
-   // '- whitepaper -': 'whitepaper.html',
-    //'- roadmap -': 'roadmap.html',
-  //  '- tokenomics -': 'tokenomics.html',
-    '- community -': 'community.html',
-    //'- staking -': 'staking.html',
-    //'- exchange -': 'exchange.html',
+    '- community -': 'https://x.com/',
     '- contact -': 'contact.html',
     '- matrix -': 'matrix.html',
 
@@ -69,13 +62,7 @@ const commandPages = {
 // Command List Data
 const commands = [
     { name: '- about -', desc: '' },
-   // { name: '- features -', desc: '' },
-  //  { name: '- whitepaper -', desc: '' },
-    //{ name: '- roadmap -', desc: '' },
-   // { name: '- tokenomics -', desc: '' },
     { name: '- community -', desc: '' },
-   // { name: '- staking -', desc: '' },
-   // { name: '- exchange -', desc: '' },
     { name: '- contact -', desc: '' },
     { name: '- matrix -', desc: '' }
 ];

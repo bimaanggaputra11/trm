@@ -67,6 +67,29 @@ body {
     box-shadow: 0 0 10px #27c93f;
 }
 
+.icon-img{
+    width: 13px;
+    height: 13px;
+}
+
+.social-x{
+     display:inline;
+    width: 20px;
+    height: 18px;
+    padding-inline: 3px;
+    transition: transform 0.3s ease;
+   
+   
+    border-radius: 50px;
+     box-sizing:inherit;
+    
+
+}
+
+.social-x:hover {
+    transform: scale(1.1);
+}
+
 .terminal-title {
     color: #00ff00;
     font-size: 14px;
@@ -437,7 +460,7 @@ body {
 }
 
 .bounty-header .typing-text {
-    text-align: center;  /* ← TAMBAHKAN INI */
+    text-align: center;  
 }
 
 .bounty-tabs {

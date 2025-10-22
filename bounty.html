@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminal MTRX - Matrix Missions</title>
+    <link rel="icon" type="image/png" href="assets/NOB.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -49,218 +50,7 @@
     <script>
         // Bounty Data by Type
         const bountyData = {
-            /*'twitter-raid': {
-                title: 'TWITTER RAID MISSIONS',
-                active: [
-                    {
-                        name: 'Daily RT Campaign #1',
-                        task: 'Retweet and like our latest announcement post',
-                        submission: 'Submit tweet URL via form',
-                        reward: '0.5',
-                        engagement: '100 Likes, 50 RTs'
-                    },
-                    {
-                        name: 'Weekly Thread Boost',
-                        task: 'Reply to our thread with quality engagement',
-                        submission: 'Submit reply URL',
-                        reward: '1.0',
-                        engagement: '200 Likes, 100 RTs'
-                    },
-                    {
-                        name: 'Influencer Tag Campaign',
-                        task: 'Tag 3 crypto influencers in our post',
-                        submission: 'Screenshot + Tweet URL',
-                        reward: '0.75',
-                        engagement: '150 Likes, 75 RTs'
-                    }
-                ],
-                complete: [
-                    {
-                        name: 'Launch Day Raid',
-                        task: 'RT launch announcement and tag friends',
-                        submission: 'Tweet URL submitted',
-                        reward: '2.0',
-                        engagement: '500 Likes, 300 RTs'
-                    }
-                ],
-                pending: [
-                    {
-                        name: 'Community Spotlight',
-                        task: 'Create engagement thread about TOKEN',
-                        submission: 'Under review',
-                        reward: '1.5',
-                        engagement: '250 Likes, 150 RTs'
-                    }
-                ],
-                expired: [
-                    {
-                        name: 'Beta Launch Promotion',
-                        task: 'Promote beta launch on Twitter',
-                        submission: 'Campaign ended',
-                        reward: '3.0',
-                        engagement: '1000 Likes, 500 RTs'
-                    }
-                ]
-            },
-            'content-creation': {
-                title: 'CONTENT CREATION MISSIONS',
-                active: [
-                    {
-                        name: 'YouTube Tutorial',
-                        task: 'Create 5-10 min tutorial about TOKEN staking',
-                        submission: 'YouTube link + analytics',
-                        reward: '5.0',
-                        engagement: '1000 views, 50 likes'
-                    },
-                    {
-                        name: 'Blog Article',
-                        task: 'Write detailed article about TOKEN features',
-                        submission: 'Article link (Medium/Blog)',
-                        reward: '3.0',
-                        engagement: '500 reads, 25 claps'
-                    },
-                    {
-                        name: 'Infographic Design',
-                        task: 'Create shareable infographic about tokenomics',
-                        submission: 'High-res image file',
-                        reward: '2.5',
-                        engagement: '200 shares'
-                    }
-                ],
-                complete: [
-                    {
-                        name: 'Explainer Video',
-                        task: 'Create animated explainer video',
-                        submission: 'Video delivered',
-                        reward: '10.0',
-                        engagement: '5000 views, 200 likes'
-                    }
-                ],
-                pending: [
-                    {
-                        name: 'Twitter Space Hosting',
-                        task: 'Host Twitter Space about DeFi trends',
-                        submission: 'Recording submitted',
-                        reward: '4.0',
-                        engagement: '300 listeners'
-                    }
-                ],
-                expired: [
-                    {
-                        name: 'Launch Week Content',
-                        task: 'Daily content during launch week',
-                        submission: 'Week ended',
-                        reward: '15.0',
-                        engagement: '10000 impressions'
-                    }
-                ]
-            },
-            'telegram-campaign': {
-                title: 'TELEGRAM CAMPAIGN MISSIONS',
-                active: [
-                    {
-                        name: 'Daily Engagement',
-                        task: 'Active participation in group discussions',
-                        submission: 'Daily activity log',
-                        reward: '0.3',
-                        engagement: '10 messages/day'
-                    },
-                    {
-                        name: 'Member Referral',
-                        task: 'Invite 10 new members to Telegram',
-                        submission: 'Referral list',
-                        reward: '2.0',
-                        engagement: '10 active members'
-                    },
-                    {
-                        name: 'Question Answering',
-                        task: 'Help answer community questions',
-                        submission: 'Screenshot of answers',
-                        reward: '1.0',
-                        engagement: '20 helpful answers'
-                    }
-                ],
-                complete: [
-                    {
-                        name: 'Welcome Campaign',
-                        task: 'Welcome new members for 7 days',
-                        submission: 'Completed',
-                        reward: '1.5',
-                        engagement: '100 welcomes'
-                    }
-                ],
-                pending: [
-                    {
-                        name: 'Community Poll',
-                        task: 'Create and run community poll',
-                        submission: 'Under review',
-                        reward: '0.8',
-                        engagement: '200 votes'
-                    }
-                ],
-                expired: [
-                    {
-                        name: 'Launch AMA',
-                        task: 'Participate in launch AMA',
-                        submission: 'Event ended',
-                        reward: '2.5',
-                        engagement: '500 participants'
-                    }
-                ]
-            },
-            'meme-contest': {
-                title: 'MEME CONTEST MISSIONS',
-                active: [
-                    {
-                        name: 'Weekly Meme #1',
-                        task: 'Create viral TOKEN meme',
-                        submission: 'Upload to contest thread',
-                        reward: '1.0',
-                        engagement: '500 likes, 100 shares'
-                    },
-                    {
-                        name: 'GIF Animation',
-                        task: 'Create animated TOKEN GIF',
-                        submission: 'GIF file + Twitter post',
-                        reward: '2.0',
-                        engagement: '1000 likes, 250 shares'
-                    },
-                    {
-                        name: 'Meme Series',
-                        task: 'Create 5 related memes for campaign',
-                        submission: 'ZIP file with all memes',
-                        reward: '3.5',
-                        engagement: '2000 total engagement'
-                    }
-                ],
-                complete: [
-                    {
-                        name: 'Launch Meme Contest',
-                        task: 'Best launch meme winner',
-                        submission: 'Won 1st place',
-                        reward: '5.0',
-                        engagement: '10000 impressions'
-                    }
-                ],
-                pending: [
-                    {
-                        name: 'Holiday Special',
-                        task: 'Holiday-themed TOKEN meme',
-                        submission: 'Judging in progress',
-                        reward: '2.5',
-                        engagement: '1500 likes'
-                    }
-                ],
-                expired: [
-                    {
-                        name: 'September Contest',
-                        task: 'Monthly meme contest',
-                        submission: 'Contest closed',
-                        reward: '4.0',
-                        engagement: '5000 impressions'
-                    }
-                ]
-            },*/
+
             'translation': {
                 title: 'MATRIX MISSIONS',
                 active: [
@@ -293,84 +83,84 @@
                         reward: '0.4 SOL',
                         engagement: '-'
                     },
-{
+                    {
                         name: 'Story Weaver Saga',
                         task: 'Write a short story or fanfic (500-1,000 words) about MTRX holders adventures in the Matrix crypto world. Make it absurd, funny, or inspiring—just ensure it makes people want to HODL forever.',
                         submission: 'Tweet the story link (Medium/Substack), tag @MTRXmissions, use #MTRXMatrixBounty #StoryWeaverSaga.',
                         reward: '0.6 SOL',
                         engagement: '-'
                     },
-{
+                    {
                         name: 'Swag Squad Creator',
                         task: 'Design merchandise mockups (T-shirt, mug, or sticker) with MTRX theme.',
                         submission: 'Tweet the mockup design, tag @MTRXmissions, use #MTRXMatrixBounty #SwagSquadCreator',
                         reward: '0.7 SOL',
                         engagement: '37 likes & 20 RTs'
                     },
-{
+                    {
                         name: 'Collab Chaos Catalyst',
                         task: 'Collab with other creators (at least 2 people) for MTRX cross-promo content, like a joint podcast or live stream. Create a viral domino effect!',
                         submission: 'Tweet collab results + proposal, tag @MTRX_Official, use #MTRXMatrixBounty #CollabChaosCatalyst.',
                         reward: '2 SOL',
                         engagement: '37 likes & 20 RTs'
                     },
-{
+                    {
                         name: 'MTRXs Red Pill Roast',
                         task: 'Create a short stand-up comedy script (1 minute) roasting other meme coins, but end with "MTRX is the real red pill" punchline. ',
                         submission: 'Tweet the script/video roast, tag@MTRX_Official, use #MTRXMatrixBounty #MTRXsRedPillRoast.',
                         reward: '0.5 SOL',
                         engagement: '37 likes & 20 RTs'
                     },
-{
+                    {
                         name: 'MTRX Remix Madness',
                         task: 'Remix a viral song (e.g., "Old Town Road") into an MTRX hype track with silly lyrics like "Im gonna moon with my MTRX, no cap, Solana trap". Use free tools.',
                         submission: 'Tweet the remix audio/video link, tag @MTRX_Official, use #MTRXMatrixBounty #MTRXRemixMadness',
                         reward: '0.6 SOL',
                         engagement: '21 likes & 13 RTs'
                     },
-{
+                    {
                         name: 'Fake News',
                         task: 'Create satirical "breaking news" e.g "MTRX Acquires Tesla—Moon Incoming!" ',
                         submission: 'Tweet, tag @MTRX_Official + 3 friends, use #MTRXMatrixBounty #MTRXNews.',
                         reward: '0.7 SOL',
                         engagement: '47 likes & 26 RTs'
                     },
-{
+                    {
                         name: 'Blind Apes',
                         task: 'buying MTRX, and tweeting "I just aped MTRX" (No Minimum Buy). ',
                         submission: 'Tweet the speedrun video, tag @MTRX_Official, use #MTRXMatrixBounty #MTRXblindapes',
                         reward: '0.3 SOL',
                         engagement: '10 likes & 5 RTs'
                     },
-{
+                    {
                         name: 'Trick-or-Trick-or-Treat',
                         task: 'Go door-to-door (or virtual) tricking neighbors into crypto talks: Offer "treats" (MTRX memes) or "tricks" (fake bear market scares), record the best reactions.',
                         submission: 'Tweet thread reaksi trick-or-treat-nya, tag @MTRX_Official, pakai #MTRXMatrixBounty #Halloween #TrickOrTrickOrTreat.',
                         reward: '0.7 SOL',
                         engagement: '58 likes & 25 RTs'
                     },
-{
+                    {
                         name: 'Hype Tweet Blast',
                         task: 'Tweet 1 sentence on why MTRX will moon: ',
                         submission: 'Tweet directly, tag @MTRX_Official, use #MTRXMatrixBounty #HypeTweetBlast.',
                         reward: '0.2 SOL',
                         engagement: '12 likes & 4 RTs'
                     },
-{
+                    {
                         name: 'Collab Duo Snap',
                         task: 'Photo with 1 friend holding MTRX logo, caption "MTRX duo team—moon together!" (no video needed).',
                         submission: 'Tweet the collab photo, tag @MTRX_Official, use #MTRXMatrixBounty #CollabDuoSnap',
                         reward: '1 SOL',
                         engagement: '25 likes & 10 RTs'
                     },
-{
+                    {
                         name: 'Prank Whisper Quick',
                         task: 'Whisper "Buy MTRX now!" to a friend via 5-sec voice note, record funny reaction.',
                         submission: 'Tweet voice note/mini video, tag @MTRX_Official, use #MTRXMatrixBounty #PrankWhisperQuick.',
                         reward: '0.3 SOL',
                         engagement: '9 likes & 3 RTs'
                     },
-{
+                    {
                         name: 'Wynn Thread Challenge',
                         task: 'Create a Twitter thread (min 5 tweets) hyping MTRX as the next Solana meme king—tag @JamesWynnReal in the first tweet. If he responds (like, RT, or reply), unlock bonus!',
                         submission: 'tag @MTRX_Official, use #MTRXMatrixBounty #WynnThreadChallenge.',
