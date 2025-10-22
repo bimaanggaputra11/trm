@@ -38,14 +38,18 @@ const asciiArt = `
                                                                                                                                                            
 `;
 
-const welcomeText = `> MTRX: The Matrix of Collective Creation.`;
+const welcomeText = `> MTRX: The Matrix of Collective Creation.` ;
 
 // Boot Sequence Text
 const bootSequenceText = [
     'Initializing system...',
     'Loading modules... [OK]',
     'Starting services... [OK]',
-    'Welcome to MTRX Terminal v1.0'
+    'Welcome to MTRX Terminal v1.0',
+    'CA: ',
+    'TBA'
+    
+
 ];
 
 // Command Pages Mapping
@@ -83,7 +87,32 @@ async function initTerminal() {
     for (let i = 0; i < bootLines.length; i++) {
         await new Promise(resolve => setTimeout(resolve, 200));
         await typeText(bootLines[i], bootSequenceText[i], 10);
-    }
+        
+        
+        if (i === bootLines.length - 1) {
+            const copyIcon = document.createElement('button');
+            copyIcon.innerHTML = ' ⎘';  
+            copyIcon.className = 'copy-icon-boot';
+            copyIcon.style.cssText = `
+                cursor: pointer;
+                margin-left: 10px;
+                background: transparent;
+                border: none;
+                color: #00ff00;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-size: 14px;
+            `;
+            
+            copyIcon.onclick = () => {
+                navigator.clipboard.writeText(bootSequenceText[i]);
+                copyIcon.innerHTML = ' ✓';
+                setTimeout(() => copyIcon.innerHTML = ' ⎘', 2000);
+            };
+            
+            bootLines[i].appendChild(copyIcon);
+        }
+    }  // ← Closing bracket loop
     
     await new Promise(resolve => setTimeout(resolve, 500));
     
@@ -99,6 +128,7 @@ async function initTerminal() {
     
     // Display Welcome Message
     await typeText(welcomeSection, welcomeText, 10);
+    
     
     // Display Command List Title
     await new Promise(resolve => setTimeout(resolve, 300));
